@@ -1,0 +1,133 @@
+/* ====== VARIÁVEIS DE CORES TERROSAS ====== */
+:root {
+  --bege-claro: #fbe9e7;
+  --terracota: #d2695e;
+  --argila: #a0522d;
+  --tijolo: #8b3e2f;
+  --marrom-suave: #6d4c41;
+  --marrom-escuro: #3e2723;
+}
+
+body {
+    background-color: var(--marrom-suave);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--marrom-escuro);
+    margin: 0;
+    padding: 2rem;
+}
+
+.container {
+    background: var(--bege-claro);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border: 2px solid var(--terracota);
+}
+
+h1, h2, h3 {
+    color: var(--marrom-escuro);
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+body div a{
+    display: inline-block;
+    width: 124px;
+    margin-bottom: 1rem;
+    padding: 0.6rem 1rem;
+    background: var(--terracota);
+    color: var(--bege-claro);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+body div a:hover{
+    background: #c86b4f;
+    transform: translateY(-2px);
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--bege-claro);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 2px solid var(--terracota);
+}
+
+form h1 {
+    border-bottom: 2px solid var(--argila);
+    padding-bottom: 10px;
+    align-self: center;
+    color: var(--tijolo);
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--marrom-suave);
+}
+
+.form-control, 
+.form-select {
+    border: 1px solid var(--argila);
+    border-radius: 10px;
+    padding: 0.6rem;
+    transition: 0.2s;
+    background: var(--bege-claro);
+    color: var(--marrom-escuro);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--terracota);
+    box-shadow: 0 0 0 0.25rem rgba(156, 79, 58, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: var(--terracota);
+    border-color: var(--terracota);
+}
+
+.form-check-label {
+    color: var(--marrom-escuro);
+}
+
+.btn-primary {
+    background-color: var(--terracota);
+    border: none;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 0.75rem;
+    transition: 0.3s;
+    color: var(--bege-claro);
+}
+
+.btn-primary:hover {
+    background-color: var(--tijolo);
+    transform: translateY(-2px);
+}
+
+.alert-danger {
+    background-color: var(--tijolo);
+    color: var(--bege-claro);
+    border: none;
+    border-radius: 10px;
+}
+
+#descricaoComida {
+    background: #f0d5c0;
+    border-left: 5px solid var(--terracota);
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    color: var(--marrom-escuro);
+}

@@ -1,0 +1,132 @@
+/* ====== VARIÁVEIS DE CORES TERROSAS ====== */
+:root {
+  --bege-claro: #fbe9e7;
+  --terracota: #d2695e;
+  --argila: #a0522d;
+  --tijolo: #8b3e2f;
+  --marrom-suave: #6d4c41;
+  --marrom-escuro: #3e2723;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--marrom-suave) 0%, var(--marrom-escuro) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.splash-screen.fade-out {
+    opacity: 0;
+    transform: scale(1.1);
+    pointer-events: none;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo-text {
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--bege-claro);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+}
+
+.logo-subtitle {
+    font-size: 1.8rem;
+    color: var(--terracota);
+    font-style: italic;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        transform: scale(1);
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-text {
+    animation: fadeInUp 1.5s ease-out, pulse 2s infinite 1.5s;
+}
+
+.logo-subtitle {
+    animation: fadeInUp 1.5s ease-out 0.5s both;
+}
+
+.loading-bar {
+    width: 200px;
+    height: 4px;
+    background: var(--argila);
+    border-radius: 2px;
+    margin-top: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.loading-progress {
+    width: 0%;
+    height: 100%;
+    background: var(--terracota);
+    border-radius: 2px;
+    animation: loading 3s ease-in-out forwards;
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.main-content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out 1s;
+}
+
+.main-content.fade-in {
+    opacity: 1;
+}

@@ -1,0 +1,104 @@
+/* ====== VARIÁVEIS DE CORES TERROSAS ====== */
+:root {
+  --bege-claro: #fbe9e7;
+  --terracota: #d2695e;
+  --argila: #a0522d;
+  --tijolo: #8b3e2f;
+  --marrom-suave: #6d4c41;
+  --marrom-escuro: #3e2723;
+}
+
+body {
+    background-color: var(--marrom-suave);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--marrom-escuro);
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    color: var(--bege-claro);
+    background: var(--terracota);
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 30%;
+    align-self: center;
+}
+
+a[href='listar.php']{
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.6rem 1rem;
+    background: var(--terracota);
+    color: var(--bege-claro);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s;
+    align-self: flex-start;
+}
+
+a[href='listar.php']:hover{
+    background: #c86b4f;
+    transform: translateY(-2px);
+}
+
+form {
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    background: var(--bege-claro);
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid var(--terracota);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--marrom-suave);
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--argila);
+    border-radius: 6px;
+    background: var(--bege-claro);
+    color: var(--marrom-escuro);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+select:focus {
+    outline: none;
+    background: #f2c1b6;
+    border: 1px solid var(--tijolo);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--terracota);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--bege-claro);
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 50px;
+}
+
+button:hover {
+    background: var(--tijolo);
+    transform: translateY(-2px);
+}
