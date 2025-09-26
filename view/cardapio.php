@@ -16,9 +16,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio - OverCozido</title>
-    <!-- <link rel="stylesheet" href="../view/styles/cardapio.css"> -->
+    <link rel="stylesheet" href="../view/styles/Pedido/cardapio.css">
 
-    <style>
+    <!-- <style>
         /* ====== VARIÁVEIS DE CORES TERROSAS ====== */
         :root {
         --bege-claro: #fbe9e7;
@@ -29,7 +29,6 @@
         --marrom-escuro: #3e2723;
         }
 
-        /* ====== RESET ====== */
         * {
             margin: 0;
             padding: 0;
@@ -129,7 +128,6 @@
             transform: scale(1.1);
         }
 
-        /* ====== LINK ADICIONAR BEBIDA ====== */
         .cardapio-section > a {
             display: inline-block;
             margin: 15px;
@@ -186,7 +184,7 @@
         td img:hover {
             transform: scale(1.15);
         }
-    </style>
+    </style> -->
 
 </head>
 <body>
