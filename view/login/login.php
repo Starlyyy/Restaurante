@@ -16,8 +16,8 @@ if(isset($_POST['nome'])) {
 
     if(!$erros) {
         //Deu certo o login
-        // header("location: ../telaInicial.php");
-        echo "OI MUNDO";
+        header("location: ../pedidos/listar.php");
+        // echo "OI MUNDO";
 
     } else {
         $msgErro = implode("<br>", $erros);
@@ -34,9 +34,99 @@ if(isset($_POST['nome'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> -->
+    <style>
+
+/* Paleta */
+:root {
+    --bege-claro: #fbe9e7;
+    --terracota: #d2695e;
+    --argila: #a0522d;
+    --tijolo: #8b3e2f;
+    --marrom-suave: #6d4c41;
+    --marrom-escuro: #3e2723;
+    --white: #ffffff;
+}
+
+/* Fundo */
+body {
+    background: linear-gradient(135deg, var(--marrom-escuro), var(--marrom-suave));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Card principal */
+.divizinha {
+    background-color: var(--terracota) !important;
+    width: 420px;
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 2px solid var(--tijolo);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.35);
+    color: var(--white);
+    animation: fadeIn 0.6s ease;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Labels */
+.form-label {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Inputs Bootstrap */
+.form-control {
+    border: 2px solid var(--tijolo);
+    background-color: var(--bege-claro);
+    color: var(--marrom-escuro);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--argila);
+    box-shadow: 0 0 8px var(--argila);
+}
+
+/* Botão Mostrar Senha */
+.btn-show {
+    border: 2px solid var(--white);
+    color: var(--white);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.btn-show:hover {
+    background-color: var(--bege-claro);
+    color: var(--marrom-escuro);
+}
+
+/* Botão Enviar */
+.btn-submit {
+    background-color: var(--tijolo);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--marrom-escuro);
+}
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
    <div class="divizinha">
