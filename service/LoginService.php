@@ -12,13 +12,13 @@ class LoginService {
         $this->usuarioDAO = new UsuarioDAO();
     }
 
-    public function validarLogin(?string $login, ?string $senha) {
+    public function validarLogin(?string $nome, ?string $senha) {
 
         $erros = array();
 
         //Adicionar erros se $login e $senha não estão preenchidos
-        if(! $login)
-            array_push($erros, "Informe o login!");
+        if(! $nome)
+            array_push($erros, "Informe o nome!");
 
         if(! $senha)
             array_push($erros, "Informe a senha!");

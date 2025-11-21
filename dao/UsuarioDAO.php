@@ -71,8 +71,8 @@ class UsuarioDAO {
             $reg['id_usuario'], 
             $reg['nomeUsuario'], 
             $reg['senhaUsuario'], 
-            $reg['isAdm'],
-            $reg['fotoUsuario']);
+            $reg['fotoUsuario'],
+            $reg['isAdm']);
                                    
 
             array_push($usuarios, $usuario);

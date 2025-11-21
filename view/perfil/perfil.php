@@ -7,6 +7,7 @@ include_once(__DIR__ . "/../../controller/PerfilController.php");
 //Carregar o objeto referente ao usuário logado
 $loginCont = new LoginController();
 $usuario = $loginCont->getUsuarioLogado();
+
 if(!$usuario) {
     echo "Usuário não encontrado!";
     exit;
@@ -18,11 +19,8 @@ if(isset($_GET['msg']) && $_GET['msg'] == 1) {
     $msgSucesso = "Foto de perfil atualiza com sucesso.";
 }
 
-
 $msgErro = "";
 
-//Receber os dados do formulário
-//Verificar se o usuário já clicou no gravar
 if(isset($_FILES['foto'])) {
     //print_r($_FILES['foto']);
     $foto = $_FILES['foto'];
@@ -38,9 +36,7 @@ if(isset($_FILES['foto'])) {
 
 }
 
-//Inclusão do header e do Menu
-// include_once(__DIR__ . "/../include/header.php");
-// include_once(__DIR__ . "/../include/menu.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +44,7 @@ if(isset($_FILES['foto'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Perfil</title>
 </head>
     <body>
@@ -63,12 +60,12 @@ if(isset($_FILES['foto'])) {
 
             <div class="col-12 mb-2">
                 <div class="fw-bold">Foto:</div>
+                <!-- <?= $usuario->getFotoUsuario() ?> -->
                 <?php if($usuario->getFotoUsuario()): ?>
-                    <img src="<?= URL_ARQUIVOS . '/' . $usuario->getFotoUsuario() ?>"
-                        height="200px">
+                    <img src="<?= URL_ARQUIVOS . '/' . $usuario->getFotoUsuario()?>"
+                        height="400px">
                 <?php else: ?>
-                    <img src="../../img/perfil_nulo.png"  
-                        height="200px">    
+                    <img src="<?= URL_BASE ?>/img/perfil_nulo.png" height="400px">    
                 <?php endif; ?>
             </div>
 
@@ -97,6 +94,10 @@ if(isset($_FILES['foto'])) {
                     <div class="mt-3">
                         <button class="btn btn-success">Gravar</button>
                     </div>
+                    
+                    <div class="mt-3">
+                        <button class="btn btn-primary">Remover foto</button>
+                    </div>
                 </form>
             </div>
 
@@ -111,6 +112,3 @@ if(isset($_FILES['foto'])) {
 </body>
 </html>
 
-<!-- <?php  
-// require_once(__DIR__ . "/../include/footer.php");
-?> -->
