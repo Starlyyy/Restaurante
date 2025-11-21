@@ -13,3 +13,6 @@ define("DB_PASSWORD", "0909Iza"); //a senha tava errada...
 //Configuração do ambiente
 define("AMB_DEV", true);
 //define("AMB_DEV", false);
+
+define("SESSAO_USUARIO_ID", "USUARIOID");
+define("SESSAO_USUARIO_NOME", "USUARIONOME");

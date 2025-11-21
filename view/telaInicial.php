@@ -21,7 +21,7 @@
     <script>
         // Aguarda 3 segundos e redireciona via JavaScript
         setTimeout(() => {
-            window.location.href = '../view/pedidos/listar.php';
+            window.location.href = '../view/login/login.php';
         }, 3300);
     </script>
 </body>
