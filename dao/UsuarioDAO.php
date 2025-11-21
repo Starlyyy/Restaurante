@@ -31,7 +31,7 @@ class UsuarioDAO {
 
     public function findByLoginSenha(string $nomeUsuario, string $senha) {
         $sql = "SELECT * FROM usuario 
-                WHERE BINARY nomeUsuario = ? AND BINARY senha = ?";
+                WHERE BINARY nomeUsuario = ? AND BINARY senhaUsuario = ?";
         $stm = $this->conexao->prepare($sql);    
         $stm->execute([$nomeUsuario, $senha]);
         $result = $stm->fetchAll();

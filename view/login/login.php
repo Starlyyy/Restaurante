@@ -3,20 +3,21 @@
 require_once(__DIR__ . "/../../controller/LoginController.php");
 
 $msgErro = "";
-$login = "";
+$nome = "";
 $senha = "";
 
 //Rotina para logar
-if(isset($_POST['login'])) {
-    $login = trim($_POST['login']) ? trim($_POST['login']) : NULL;
+if(isset($_POST['nome'])) {
+    $nome = trim($_POST['nome']) ? trim($_POST['nome']) : NULL;
     $senha = trim($_POST['senha']) ? trim($_POST['senha']) : NULL;
 
     $loginCont = new LoginController();
-    $erros = $loginCont->login($login, $senha);
+    $erros = $loginCont->login($nome, $senha);
 
-    if(! $erros) {
+    if(!$erros) {
         //Deu certo o login
-        header("location: ../../index.php");
+        // header("location: ../telaInicial.php");
+        echo "OI MUNDO";
 
     } else {
         $msgErro = implode("<br>", $erros);
@@ -33,24 +34,24 @@ if(isset($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> -->
 </head>
 <body>
    <div class="divizinha">
-    <form action="" method="post" class="d-flex flex-column gap-4">
+    <form action="" method="POST" class="d-flex flex-column gap-4">
 
         <div class="form-group w-100">
             <label for="nome" class="form-label">Usuário</label>
-            <input type="text" name="nome" id="nome" class="form-control">
+            <input type="text" name="nome" id="nome" class="form-control" value="<?= $nome ?>">
         </div>
 
         <div class="form-group w-100">
             <label for="senha" class="form-label">Senha</label>
 
             <div class="input-group">
-                <input type="password" name="senha" id="senha" class="form-control">
+                <input type="password" name="senha" id="senha" class="form-control" value='<?= $senha ?>'>
                 
                 <button 
                     type="button" 
@@ -63,6 +64,12 @@ if(isset($_POST['login'])) {
         </div>
 
         <button type="submit" class="btn btn-submit w-100">Entrar</button>
+
+        <div>
+            <?php if ($msgErro): ?>
+                <div id="msgErro"><?= $msgErro ?></div>
+            <?php endif; ?>
+        </div>
 
     </form>
 </div>

@@ -16,3 +16,9 @@ define("AMB_DEV", true);
 
 define("SESSAO_USUARIO_ID", "USUARIOID");
 define("SESSAO_USUARIO_NOME", "USUARIONOME");
+
+define("URL_BASE", "/RestauranteAJAX");
+
+//Configuração para arquivos
+define("DIR_ARQUIVOS", __DIR__ . "/../arquivos");
+define("URL_ARQUIVOS", URL_BASE . "/arquivos");

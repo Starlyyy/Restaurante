@@ -13,12 +13,12 @@ class LoginController {
        $this->usuarioDAO = new UsuarioDAO(); 
     }
 
-    public function login($login, $senha) {
+    public function login($nome, $senha) {
         //Validar os dados
-        $erros = $this->loginService->validarLogin($login, $senha);
+        $erros = $this->loginService->validarLogin($nome, $senha);
 
         if(! $erros) {
-            $usuario = $this->usuarioDAO->findByLoginSenha($login, $senha);
+            $usuario = $this->usuarioDAO->findByLoginSenha($nome, $senha);
 
             if($usuario) {
                 //Rotina para salvar os dados do usuário na sessão do PHP
