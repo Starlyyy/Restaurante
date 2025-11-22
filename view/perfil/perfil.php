@@ -36,6 +36,7 @@ if(isset($_FILES['foto'])) {
 
 }
 
+include (__DIR__ . '/../include/menu.php');
 
 ?>
 
@@ -109,6 +110,9 @@ if(isset($_FILES['foto'])) {
                 <?php endif; ?>
             </div>
         </div>
-</body>
-</html>
+<?php 
+
+    include(__DIR__ . '/../include/footer.php');
+
+?>
 

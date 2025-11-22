@@ -7,8 +7,8 @@ $nome = $loginCont->getNomeUsuarioLogado();
 //echo $nome;
 
 ?>
-<nav class="navbar navbar-expand-md bg-light px-3">
-    <a class="navbar-brand" href="<?= URL_BASE ?>">Sistema restaurante</a>
+<nav class="container-fluid navbar navbar-expand-lg bg-light px-3">
+    <a class="navbar-brand" href="<?= URL_BASE ?>/pedidos/listar.php">Sistema restaurante</a>
 
     <button class="navbar-toggler" type="button"
         data-bs-toggle="collapse" data-bs-target="#navSite">
@@ -28,7 +28,7 @@ $nome = $loginCont->getNomeUsuarioLogado();
                         href="<?= URL_BASE ?>/view/login/sair.php">Sair</a>
                 </div>
             </li>
-            
+
         </ul>
     </div>
 </nav>

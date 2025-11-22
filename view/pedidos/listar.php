@@ -9,7 +9,6 @@
     $lista = $pedidoCont->listar();
     
     // print_r($lista);
-    include(__DIR__ . "/../include/menu.php")
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +21,11 @@
     <title>Listagem Pedidos</title>
 </head>
 <body>
+
+<?php 
+    include(__DIR__ . "/../include/menu.php")
+
+?>
 
     <h3>Listagem de Pedidos</h3> 
     
@@ -73,8 +77,9 @@
     
     </table>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    
-</body>
-</html>
+<?php 
+
+    include(__DIR__ . '/../include/footer.php');
+
+?>
 
