@@ -19,7 +19,7 @@ body {
     background-color: var(--marrom-suave);
     color: var(--marrom-escuro);
     margin: 0;
-    padding: 2rem;
+    /* padding: 2rem; */
 }
 
 a[href='../view/pedidos/listar.php']{

@@ -16,10 +16,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio - OverCozido</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../view/styles/Pedido/cardapio.css">
 
 </head>
 <body>
+
+<?php 
+    include(__DIR__ . "/include/menu.php")
+
+?>
     
     <header>🍲 Restaurante OverCozido 🍲</header>
     
@@ -80,5 +86,9 @@
             </table>
         </div>
     </div>
-</body>
-</html>
+<?php 
+
+    include(__DIR__ . '/include/footer.php');
+
+?>
+

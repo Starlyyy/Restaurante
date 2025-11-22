@@ -7,8 +7,10 @@ $nome = $loginCont->getNomeUsuarioLogado();
 //echo $nome;
 
 ?>
+
+
 <nav class="container-fluid navbar navbar-expand-lg bg-light px-3">
-    <a class="navbar-brand" href="<?= URL_BASE ?>/pedidos/listar.php">Sistema restaurante</a>
+    <a class="navbar-brand" href="<?= URL_BASE ?>/view/pedidos/listar.php">Sistema restaurante</a>
 
     <button class="navbar-toggler" type="button"
         data-bs-toggle="collapse" data-bs-target="#navSite">
