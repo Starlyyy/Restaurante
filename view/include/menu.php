@@ -8,6 +8,12 @@ $nome = $loginCont->getNomeUsuarioLogado();
 
 ?>
 
+<style>
+    .dropdown-menu {
+        transform: translateX(-80px); /* valor negativo = esquerda */
+    }
+</style>
+
 
 <nav class="container-fluid navbar navbar-expand-lg bg-light px-3">
     <a class="navbar-brand" href="<?= URL_BASE ?>/view/pedidos/listar.php">Sistema restaurante</a>

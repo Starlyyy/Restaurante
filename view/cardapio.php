@@ -18,6 +18,9 @@
     <title>Cardápio - OverCozido</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../view/styles/Pedido/cardapio.css">
+    <?php 
+        include(__DIR__ . '/include/stiloNecessario.php')
+    ?>
 
 </head>
 <body>
