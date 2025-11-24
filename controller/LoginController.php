@@ -46,4 +46,8 @@ class LoginController {
         return $this->loginService->usuarioEstaLogado();
     }
 
+    public function usuarioAdm(){
+        return $this->loginService->usuarioAdm();
+    }
+
 }

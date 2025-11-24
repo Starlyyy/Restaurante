@@ -56,6 +56,12 @@ class LoginService {
         return null;
     }
 
+    public function usuarioAdm(){
+        $result = $this->usuarioDAO->findById($_SESSION[SESSAO_USUARIO_ID]);
+
+        if($result)
+    }
+
     public function usuarioEstaLogado() {
         $this->iniciarSessao();
 
