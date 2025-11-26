@@ -27,6 +27,9 @@ include_once __DIR__ . '/../adm/validar.php';
     <link rel="stylesheet" href="../styles/Bebida/form.css">
 </head>
 <body>
+
+    <span id='confUrlBase' data-url-base='<?=URL_BASE?>'></span>
+
     <div class="container">
         <a href="../cardapio.php">🠔 Voltar para o Cardápio</a>
         

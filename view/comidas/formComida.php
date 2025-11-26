@@ -24,6 +24,9 @@ include_once __DIR__ . '/../adm/validar.php';
     <link rel="stylesheet" href="../styles/Comida/form.css">
 </head>
 <body>
+
+    <span id='confUrlBase' data-url-base='<?=URL_BASE?>'></span>
+
     <div class="container">
         <a href="../cardapio.php">🠔 Voltar para o Cardápio</a>
         
@@ -55,7 +58,7 @@ include_once __DIR__ . '/../adm/validar.php';
                        placeholder="0.00">
             </div>
 
-            <button type="submit" class="btn-submit">Adicionar Comida</button>
+            <button type="button" class="btn-submit" onclick="salvarComida()">Adicionar Comida</button>
         </form>
     </div>
     <script src="../js/scriptComida.js"></script>

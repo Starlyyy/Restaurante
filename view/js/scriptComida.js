@@ -1,17 +1,17 @@
 const URL_BASE = document.querySelector('#confUrlBase').dataset.urlBase
 
 function salvarComida(){
-    const mesa = document.getElementById('mesa').value;
-    const bebida = document.getElementById('bebida').value;
-    const comida = document.getElementById('comida').value;
+    const nome = document.getElementById('nome').value;
+    const descricao = document.getElementById('descricao').value;
+    const preco = document.getElementById('preco').value;
 
     const dados = new FormData();
-    dados.append('idMesa', mesa);
-    dados.append('idBebida', bebida);
-    dados.append('idComida', comida);
+    dados.append('nome', nome);
+    dados.append('descricao', descricao);
+    dados.append('preco', preco);
 
     const xhttp = new XMLHttpRequest();
-    xhttp.open('POST', URL_BASE + '/api/salvarPedido.php');
+    xhttp.open('POST', URL_BASE + '/api/salvarComida.php');
 
     xhttp.onload = function(){
         const erros = xhttp.responseText;
@@ -20,7 +20,7 @@ function salvarComida(){
             alert('Erro ao salvar pedido:\n' + erros);
         } else {
             alert('Pedido salvo com sucesso!');
-            window.location.href = URL_BASE + '/view/pedidos/listar.php';
+            window.location.href = URL_BASE + '/view/cardapio.php';
         }
     }
     xhttp.send(dados);
