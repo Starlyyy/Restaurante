@@ -58,5 +58,6 @@ include_once __DIR__ . '/../adm/validar.php';
             <button type="submit" class="btn-submit">Adicionar Comida</button>
         </form>
     </div>
+    <script src="../js/scriptComida.js"></script>
 </body>
 </html>
