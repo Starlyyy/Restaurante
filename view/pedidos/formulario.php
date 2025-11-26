@@ -36,6 +36,7 @@ unset($_SESSION['erro']);
     </head>
 
     <body>
+        <span id='confUrlBase' data-url-base='<?=URL_BASE?>'></span>
 
         <div class="container my-5 col-8">
 
@@ -115,44 +116,13 @@ unset($_SESSION['erro']);
                 </p>
 
                 <!-- Botão -->
-                <button type="submit" class="btn btn-primary w-100 mt-3">Enviar pedido</button>
+                <button type="button" class="btn btn-primary w-100 mt-3" onclick="salvarPedido()">Enviar pedido</button>
             </form>
         </div>
 
-        <script>
-            const selectComida = document.getElementById('comida');
-            const descricaoComida = document.getElementById('descricaoComida');
-            const radios = document.querySelectorAll('input[name="alcoolica"]');
-            const selectBebida = document.getElementById('bebida');
+        <script src="../js/scriptPedido.js">
 
-            // Atualizar descrição da comida
-            selectComida.addEventListener('change', function() {
-                const selected = this.options[this.selectedIndex];
-                descricaoComida.innerText = selected.dataset.descricao || '';
-            });
-
-            // Filtrar bebidas
-            function filtrarBebidas(tipo) {
-                for (let opt of selectBebida.options) {
-                    if (opt.value === "") continue; // ignora "Selecione"
-                    opt.style.display = (opt.dataset.alcoolica === tipo) ? "block" : "none";
-                }
-                // reseta se a atual não for compatível
-                if (selectBebida.selectedIndex > 0 && selectBebida.options[selectBebida.selectedIndex].dataset.alcoolica !== tipo) {
-                    selectBebida.value = "";
-                }
-            }
-
-            radios.forEach(r => {
-                r.addEventListener('change', function() {
-                    filtrarBebidas(this.value);
-                });
-            });
-
-            // Se já veio preenchido da sessão, aplica filtro
-            <?php if ($alcoolicaSelecionada): ?>
-                filtrarBebidas("<?= $alcoolicaSelecionada ?>");
-            <?php endif; ?>
+            
         </script>
 
     </body>
