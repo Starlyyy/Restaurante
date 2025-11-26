@@ -19,6 +19,7 @@ $alcoolicaSelecionada  = $old['alcoolica'] ?? '';
 
 // Limpa erro (pra não ficar persistindo sempre)
 unset($_SESSION['erro']);
+include_once(__DIR__ . "/../login/validar.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

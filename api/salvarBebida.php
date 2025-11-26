@@ -17,7 +17,7 @@ $erros = $bebidaController->inserir($bebida);
 
 $msgErro = '';
 if ($erros) {
-    $msgErro = implode("<br>", $erros);
+    $msgErro = implode("\n", $erros);
 }
 
 echo $msgErro;

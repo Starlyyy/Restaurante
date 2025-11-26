@@ -15,6 +15,7 @@ $preco = $old['preco'] ?? '';
 // Limpa erro (pra não ficar persistindo sempre)
 unset($_SESSION['erro']);
 include_once __DIR__ . '/../adm/validar.php';
+include_once(__DIR__ . "/../login/validar.php");
 
 ?>
 
@@ -51,15 +52,11 @@ include_once __DIR__ . '/../adm/validar.php';
                 <div class="group-label">Tipo de Bebida:</div>
                 <div class="radio-options">
                     <div class="radio-option">
-                        <input type="radio" name="alcoolica" id="alcoolicaS" value="S" 
-                            <!-- <?= $alcoolica === 'S' ? 'checked' : '' ?> -->
-                            >
+                        <input type="radio" name="alcoolica" id="alcoolicaS" value="S" checked>
                         <label for="alcoolicaS">Alcoólica</label>
                     </div>
                     <div class="radio-option">
-                        <input type="radio" name="alcoolica" id="alcoolicaN" value="N"
-                            <!-- <?= $alcoolica === 'N' ? 'checked' : '' ?> -->
-                            >
+                        <input type="radio" name="alcoolica" id="alcoolicaN" value="N">
                         <label for="alcoolicaN">Não alcoólica</label>
                     </div>
                 </div>

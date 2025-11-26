@@ -1,4 +1,7 @@
 <?php 
+
+include_once(__DIR__ . "/../login/validar.php");
+
 require_once (__DIR__ . "/../../controller/BebidaController.php");
 include_once __DIR__ . '/../adm/validar.php';
 

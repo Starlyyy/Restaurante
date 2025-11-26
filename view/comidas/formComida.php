@@ -13,6 +13,7 @@ $precoSelecionado      = $old['preco'] ?? '';
 unset($_SESSION['erro']);
 
 include_once __DIR__ . '/../adm/validar.php';
+include_once(__DIR__ . "/../login/validar.php");
 ?>
 
 <!DOCTYPE html>
