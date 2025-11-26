@@ -1,13 +1,10 @@
 <?php
 session_start();
 
-require_once(__DIR__ . "/../../controller/BebidaController.php");
 require_once(__DIR__ . "/../../controller/ComidaController.php");
 
-$controladorBebida = new BebidaController();
 $controladorComida = new ComidaController();
 
-$bebidas = $controladorBebida->listar();
 $comidas = $controladorComida->listar();
 
 // Mensagem de erro e dados antigos
@@ -76,14 +73,9 @@ unset($_SESSION['erro']);
                 <div class="mb-3">
                     <label for="bebida" class="form-label">Bebida:</label>
                     <select name="bebida" id="bebida" class="form-select">
-                        <option value="" hidden disabled <?= !$bebidaSelecionada ? 'selected' : '' ?>>Selecione</option>
-                        <?php foreach ($bebidas as $bebida): ?>
-                            <option value="<?= $bebida->getId() ?>"
-                                data-alcoolica="<?= $bebida->getAlcoolica() ?>"
-                                <?= $bebidaSelecionada == $bebida->getId() ? 'selected' : '' ?>>
-                                <?= $bebida->getNome() ?>
+                        <option value="" hidden disabled selected>Selecione</option>
+                            <option>
                             </option>
-                        <?php endforeach; ?>
                     </select>
                 </div>
 
