@@ -52,12 +52,14 @@ include_once __DIR__ . '/../adm/validar.php';
                 <div class="radio-options">
                     <div class="radio-option">
                         <input type="radio" name="alcoolica" id="alcoolicaS" value="S" 
-                            <?= $alcoolica === 'S' ? 'checked' : '' ?>>
+                            <!-- <?= $alcoolica === 'S' ? 'checked' : '' ?> -->
+                            >
                         <label for="alcoolicaS">Alcoólica</label>
                     </div>
                     <div class="radio-option">
                         <input type="radio" name="alcoolica" id="alcoolicaN" value="N"
-                            <?= $alcoolica === 'N' ? 'checked' : '' ?>>
+                            <!-- <?= $alcoolica === 'N' ? 'checked' : '' ?> -->
+                            >
                         <label for="alcoolicaN">Não alcoólica</label>
                     </div>
                 </div>
@@ -70,8 +72,9 @@ include_once __DIR__ . '/../adm/validar.php';
                        placeholder="0.00" >
             </div>
 
-            <button type="submit" class="btn-submit">Adicionar Bebida</button>
+            <button type="button" class="btn-submit" onclick="salvarBebida()">Adicionar Bebida</button>
         </form>
     </div>
+    <script src="../js/scriptBebida.js"></script>
 </body>
 </html>

@@ -17,5 +17,7 @@ $erros = $comidaController->inserir($comida);
 
 $msgErro = '';
 if ($erros) {
-    $msgErro = implode("<br>", $erros);
+    $msgErro = implode("\n", $erros);
 }
+
+echo $msgErro;

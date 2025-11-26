@@ -13,41 +13,75 @@ class Comida{
         $this->preco = null;
     }
 
-    public function getId(): int{
+    
+
+    /**
+     * Get the value of id
+     */
+    public function getId(): ?int
+    {
         return $this->id;
     }
 
-    public function setId(int $id): self{
+    /**
+     * Set the value of id
+     */
+    public function setId(?int $id): self
+    {
         $this->id = $id;
 
         return $this;
     }
 
-    public function getNome(): string{
+    /**
+     * Get the value of nome
+     */
+    public function getNome(): ?string
+    {
         return $this->nome;
     }
 
-    public function setNome(string $nome): self{
+    /**
+     * Set the value of nome
+     */
+    public function setNome(?string $nome): self
+    {
         $this->nome = $nome;
 
         return $this;
     }
 
-    public function getDescricao(): string{
+    /**
+     * Get the value of descricao
+     */
+    public function getDescricao(): ?string
+    {
         return $this->descricao;
     }
 
-    public function setDescricao(string $descricao): self{
+    /**
+     * Set the value of descricao
+     */
+    public function setDescricao(?string $descricao): self
+    {
         $this->descricao = $descricao;
 
         return $this;
     }
 
-    public function getPreco(): float{
+    /**
+     * Get the value of preco
+     */
+    public function getPreco(): ?float
+    {
         return $this->preco;
     }
 
-    public function setPreco(float $preco): self{
+    /**
+     * Set the value of preco
+     */
+    public function setPreco(?float $preco): self
+    {
         $this->preco = $preco;
 
         return $this;

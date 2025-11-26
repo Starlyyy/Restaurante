@@ -1,18 +1,18 @@
 const URL_BASE = document.querySelector('#confUrlBase').dataset.urlBase
 
-function salvarComida(){
+function salvarBebida(){
     const nome = document.getElementById('nome').value;
-    const descricao = document.getElementById('descricao').value;
+    const alcoolica = document.querySelector('input[name="alcoolica"]:checked');
+    const alcool = alcoolica.value;
     const preco = document.getElementById('preco').value;
 
     const dados = new FormData();
     dados.append('nome', nome);
-    dados.append('descricao', descricao);
+    dados.append('alcoolica', alcool);
     dados.append('preco', preco);
 
     const xhttp = new XMLHttpRequest();
-    xhttp.open('POST', URL_BASE + '/api/salvarComida.php');
-
+    xhttp.open('POST', URL_BASE + '/api/salvarBebida.php');
     xhttp.onload = function(){
         const erros = xhttp.responseText;
 

@@ -49,7 +49,7 @@ class ComidaDAO{
 
     public function excluir(int $id) {
         try {
-            # code...
+
             $sql = 'delete from comida where id_comida = :id';
             $stm = $this->connection->prepare($sql);
             $stm->bindValue('id', $id);

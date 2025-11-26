@@ -11,9 +11,8 @@ selectComida.addEventListener('change', function() {
     descricaoComida.innerText = selected.dataset.descricao || '';
 });
 
-// CARREGAR BEBIDAS VIA XHR
-function popularSelectBebida(bebidas, valorSelecionado = "") {
-    // limpa opções, mantém a opção padrão
+function SelectBebida(bebidas, valorSelecionado = "") {
+
     selectBebida.innerHTML = '';
     const optDefault = document.createElement('option');
     optDefault.value = "";
@@ -40,18 +39,15 @@ function carregarBebidas(tipo = null, valorSelecionado = "") {
 
     xhr.open('GET', url, true);
     xhr.onload = function() {
-        if (xhr.status === 200) {
-            try {
-                const dados = JSON.parse(xhr.responseText);
-                popularSelectBebida(dados, valorSelecionado);
-            } catch (e) {
-                console.error('Resposta inválida ao carregar bebidas:', e);
-                alert('Erro ao processar lista de bebidas.');
-            }
-        } else {
-            console.error('Erro ao carregar bebidas. HTTP:', xhr.status, xhr.responseText);
-            alert('Erro ao carregar bebidas (HTTP ' + xhr.status + ').');
+
+        try {
+            const dados = JSON.parse(xhr.responseText);
+            SelectBebida(dados, valorSelecionado);
+        } catch (e) {
+            console.error('Resposta inválida ao carregar bebidas:', e);
+            alert('Erro ao processar lista de bebidas.');
         }
+        
     };
     xhr.onerror = function() {
         alert('Erro de rede ao carregar bebidas.');

@@ -7,19 +7,15 @@ $alcoolica = isset($_GET['alcoolica']) ? $_GET['alcoolica'] : null; //get pq li 
 $cont = new BebidaController();
 $bebidas = $cont->listar();
 
-$result = [];
+$bebidasFiltradas = [];
 foreach ($bebidas as $b) {
 
     if ($alcoolica !== null && $alcoolica !== '') {
         if ($b->getAlcoolica() !== $alcoolica) continue;
     }
-    $result[] = [
-        'id' => $b->getId(),
-        'nome' => $b->getNome(),
-        'alcoolica' => $b->getAlcoolica(),
-        'preco' => $b->getPreco()
-    ];
+
+    array_push($bebidasFiltradas, $b);
 }
 
-echo json_encode($result, JSON_UNESCAPED_UNICODE);
+echo json_encode($bebidasFiltradas, JSON_UNESCAPED_UNICODE);
 exit;
