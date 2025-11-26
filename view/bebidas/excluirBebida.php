@@ -1,6 +1,7 @@
 <?php 
 
 require_once(__DIR__ . '/../../controller/BebidaController.php');
+include_once __DIR__ . '/../adm/validar.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];

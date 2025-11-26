@@ -56,10 +56,14 @@ class LoginService {
         return null;
     }
 
-    public function usuarioAdm(){
-        $result = $this->usuarioDAO->findById($_SESSION[SESSAO_USUARIO_ID]);
+    public function validarIsAdm(): bool {
+        $usuario = $this->getUsuarioLogado();
 
-        if($result)
+        if($usuario && $usuario->getIsAdm() === 'S') {
+            return true;
+        }
+
+        return false;
     }
 
     public function usuarioEstaLogado() {

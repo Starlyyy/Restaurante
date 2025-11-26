@@ -11,6 +11,8 @@ $precoSelecionado      = $old['preco'] ?? '';
 
 // Limpa erro (pra não ficar persistindo sempre)
 unset($_SESSION['erro']);
+
+include_once __DIR__ . '/../adm/validar.php';
 ?>
 
 <!DOCTYPE html>

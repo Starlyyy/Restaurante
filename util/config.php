@@ -16,6 +16,7 @@ define("AMB_DEV", true);
 
 define("SESSAO_USUARIO_ID", "USUARIOID");
 define("SESSAO_USUARIO_NOME", "USUARIONOME");
+// define();
 
 define("URL_BASE", "/RestauranteAJAX");
 

@@ -9,6 +9,13 @@
 
     $bebidas = $controladorBebida->listar();
     $comidas = $controladorComida->listar();
+
+    $msg = $_GET['msg'] ?? '';
+
+    if($msg == 1) {
+        echo "<script>alert('Acesso negado! Você precisa ser um administrador para acessar essa página.');</script>";
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
