@@ -47,4 +47,8 @@ class PerfilController {
         return $erros;
     }
 
+    public function removerFoto(){
+        
+    }
+
 }

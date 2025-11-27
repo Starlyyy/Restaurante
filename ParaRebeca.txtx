@@ -1,5 +1,0 @@
-Com ajax / js implementar os selects e as validacoes. 
-
-Durante a implementacao do perfil me veio a cabeca a necessidade de criar um botao para remover a foto, 
-tendo em vista que ela salva no banco e comeca a dar erro quando a gente apaga do arquivo e continua no banco. Professor disse
-para fazermos com ajax. (pontos extras rsrs)
