@@ -2,3 +2,4 @@ COISAS IMPORTANTES RESSALTAR!!
 
 Atentar-se ao camelCase no banco de dados
 Implementar, futuramente remover a foto. [isso me deixou bem angustiada.]
+Poderiamos ter feito uma funcao no proprio mvc com sql WHERE; economiza mais tempo - o loop pega muito temo pra funcionar
