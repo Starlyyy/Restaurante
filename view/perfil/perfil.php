@@ -3,6 +3,7 @@ include_once(__DIR__ . "/../login/validar.php");
 
 include_once(__DIR__ . "/../../controller/LoginController.php");
 include_once(__DIR__ . "/../../controller/PerfilController.php");
+// include_once(__DIR__ . '/../../util/config.php');
 
 //Carregar o objeto referente ao usuário logado
 $loginCont = new LoginController();
@@ -192,7 +193,6 @@ include(__DIR__ . '/../include/menu.php');
 
     <span id='confUrlBase' data-url-base='<?=URL_BASE?>'></span>
 
-
     <div class="container container-profile">
 
         <div class="profile-card">
@@ -205,7 +205,7 @@ include(__DIR__ . '/../include/menu.php');
 
                     <div class="profile-img-wrap">
                         <?php if ($usuario->getFotoUsuario()): ?>
-                            <img id="previewImg" class="profile-img" src="<?= URL_ARQUIVOS . '/' . htmlspecialchars($usuario->getFotoUsuario()) ?>" alt="Foto de perfil">
+                            <img id="previewImg" class="profile-img" src="<?= URL_ARQUIVOS . '/' . htmlspecialchars($usuario->getFotoUsuario()) ?>" alt="Foto de perfil" class='fotoAntiga'>
                         <?php else: ?>
                             <img id="previewImg" class="profile-img" src="<?= URL_BASE ?>/img/perfil_nulo.png" alt="Sem foto">
                         <?php endif; ?>
@@ -233,9 +233,10 @@ include(__DIR__ . '/../include/menu.php');
                                 <button type="submit" class="btn btn-gravar">Gravar</button>
                             </div>
 
-                            <div>
+                            <!-- aqui da pra usar a funcao do remover arquivo que ja existe, mas como que eu faco isso?? -->
+                            <!-- <div>
                                 <button type="button" name="remover" class="btn btn-remover" onclick="removerFoto()">Remover foto</button>
-                            </div>
+                            </div> -->
 
                         </form>
 

@@ -1,31 +1,5 @@
 const URL_BASE = document.querySelector('#confUrlBase').dataset.urlBase
 
-function removerFoto() {
-    if (!confirm("Tem certeza que deseja remover a foto?")) return;
-
-    const urlBase = document.getElementById("confUrlBase").dataset.urlBase;
-
-    const xhttp = new XMLHttpRequest();
-    // xhttp.open("POST", urlBase + "/api/removerFoto.php");
-
-    // xhttp.onload = function () {
-    //     try {
-    //         const resposta = JSON.parse(xhttp.responseText);
-
-    //         if (resposta.erro) {
-    //             mostrarErro(resposta.erro);
-    //         } else if (resposta.sucesso) {
-    //             atualizarImagemPadrao();
-    //             mostrarSucesso("Foto removida com sucesso!");
-    //         }
-    //     } catch (e) {
-    //         mostrarErro("Erro inesperado ao remover a foto.");
-    //     }
-    // };
-
-    // xhttp.send("remover=1");
-}
-
 // Preview da imagem selecionada
 function previewFile(event) {
     const input = event.target;
@@ -57,7 +31,4 @@ function mostrarErro(text) {
     msgDiv.innerHTML = text;
     msgDiv.style.display = 'block';
 
-    // setTimeout(() => {
-    //     msgDiv.style.display = 'none';
-    // }, 6000);
 }
